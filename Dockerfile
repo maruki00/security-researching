@@ -14,3 +14,12 @@ wget -O /root/.gdbinit-gef.py -q https://raw.githubusercontent.com/hugsy/gef/mai
 echo source /root/.gdbinit-gef.py >> /root/.gdbinit && \ 
 cd /tools && git clone --recurse-submodules https://github.com/rizinorg/rizin && \
 cd rizin && meson build && ninja -C build && ninja -C build install
+
+
+COPY re /home/re
+COPY binexp /home/binexp
+
+
+WORKDIR /home/
+
+CMD ["/bin/bash"]
