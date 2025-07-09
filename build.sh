@@ -1,2 +1,2 @@
 #!/usr/bin/sh
-docker build -t security-researsh:ubuntu23.04 .
+docker build --no-cache -t security-research-lab .
